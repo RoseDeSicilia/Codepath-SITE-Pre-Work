@@ -121,7 +121,8 @@ I'd make the same game with Super Mario Bro's Theme, a SpongeBob Theme, and a Pl
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](https://drive.google.com/file/d/1jAo8eGGbPYvAvn8A3Lams-lTlHXZC7BR/view?usp=sharing)
+[My 5-minute Interview Recording Video](https://drive.google.com/file/d/1jAo8eGGbPYvAvn8A3Lams-lTlHXZC7BR/view?usp=sharing)
+[My 5-minute Interview Recording Audio](https://drive.google.com/file/d/1PRTH1c3qGnEB5Rq7EmvT6926K7k4taxM/view?usp=sharing) //bc zoom separates the video and the audio 🤦 
 
 
 ## License
