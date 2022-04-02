@@ -1,15 +1,12 @@
-# Codepath-SITE-Pre-Work
-# Codepath-SITE-Pre-Work
-
 # Pre-work - *Memory Game*
 
 **Memory Game** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
 
-Submitted by: **NAME**
+Submitted by: **Rose De Sicilia**
 
-Time spent: **#** hours spent in total
+Time spent: **20** hours spent in total
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: (insert your link here, should start with https://glitch.com/edit/#!/daffodil-mirror-blarney)
 
 ## Required Functionality
 
