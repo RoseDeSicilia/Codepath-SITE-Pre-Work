@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html  lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Rose's Memory Game</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body onmousemove="moveRon(event)">
+    
+    <img id="ron"/>
+    
+    <img class="title" src="https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/HogwartsQuidditchCupGold.png?v=1648620667610" >
+
+    <div>
+      
+      <button id="startBtn" onclick="startGame()">
+        Start
+      </button>
+      <button class="hidden" id="stopBtn" onclick="stopGame()">
+        Stop
+      </button> 
+      
+      <button id="music" onclick="selectSong(0)">
+        Switch to Music Pattern
+      </button>    
+      <button id="random" class="hidden" onclick="createPattern()">
+        Switch to Random Pattern
+      </button>
+<!--       
+      <button id="easyMusic" onclick="selectSong(0)">
+        Easy
+      </button>   
+      <button id="mediumMusic" onclick="selectSong(1)">
+        Medium
+      </button>    
+      <button id="insaneMusic" onclick="selectSong(2)">
+        Insane
+      </button>    -->
+      
+    </div>
+    
+    <div  class="timerContainer">
+
+      <img id="timerScroll" src="https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/oldScroll.png?v=1648856842769"/>
+      <p id="teams">
+         Gryffindor Vs. Slytherin
+      </p>
+      <p id="points"></p>
+      <p id="timer"></p>
+    </div>
+        
+      
+    
+      <div class="container8" id="gameButtonArea">
+        
+        <button class="item" id="btn1" onmousedown="startTone(1), showImage(1)" onmouseup="stopTone(1), hideImage(1)" 
+                onclick="guess(1)">
+          <img id="img1" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/harry-potter-quidditch-world-cup-ron-weasley-ginny-weasley-professor-severus-snape-harry-potter-5cd0ef1c0651245420907a680f35be52.png?v=1648613783686"/>
+        </button>
+        
+        <button class="item" id="btn2" onmousedown="startTone(2), showImage(2)" onmouseup="stopTone(2), hideImage(2)" 
+                onclick="guess(2)">
+          <img id="img2" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/orange_music_note.png?v=1647717497965"/>
+        </button>
+        
+        <button class="item" id="btn3" onmousedown="startTone(3), showImage(3)" onmouseup="stopTone(3), hideImage(3)" 
+                onclick="guess(3)">
+          <img id="img3" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/yellow_music_note.png?v=1647717500112"/>
+        </button>
+       
+        <button id="btn4" onmousedown="startTone(4), showImage(4)" onmouseup="stopTone(4), hideImage(4)" 
+                onclick="guess(4)">
+          <img id="img4" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/green_music_note.png?v=1647717503221"/>
+        </button>
+        
+        <button id="btn5" onmousedown="startTone(5), showImage(5)" onmouseup="stopTone(5), hideImage(5)" 
+                onclick="guess(5)">
+          <img id="img5" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/light_blue_music_note.png?v=1647717506857"/>
+        </button>
+        
+        <button id="btn6" onmousedown="startTone(6), showImage(6)" onmouseup="stopTone(6), hideImage(6)" 
+                onclick="guess(6)">
+          <img id="img6" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/dark_blue_music_note.png?v=1647717510037"/>
+        </button>
+        
+        <button id="btn7" onmousedown="startTone(7), showImage(7)" onmouseup="stopTone(7), hideImage(7)" 
+                onclick="guess(7)">
+          <img id="img7" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/purple_music_note.png?v=1647717513096"/>
+        </button>
+        
+        <button id="btn8" onmousedown="startTone(8), showImage(8)" onmouseup="stopTone(8), hideImage(8)" 
+                onclick="guess(8)">
+          <img id="img8" class="hidden" 
+               src="https://cdn.glitch.global/67e0cc6f-db5d-4287-a418-f89165f10662/red_music_note.png?v=1647717230255"/>
+        </button> 
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,277 @@
+
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  min-height: 100%;
+  margin: 2em;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-image: url('https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/nightQuidditchCompetition.jpg?v=1648620659101');
+  background-size: auto;
+  background-position: center;
+
+  color: black; 
+}
+
+h1 {
+  font-family: verdana, arial, sans-serif;
+}
+
+.title {
+  padding: 50px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container8 {
+  display: grid;
+  column-gap: 5px;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto;
+}
+
+.container2 {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.container1 {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto;
+}
+
+.item {
+  padding: 20px;
+  text-align: center;
+}
+
+.timerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  font-size: large;
+}
+
+
+#teams {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+#points {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#timer {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#timerScroll {
+  width: 18%;
+  padding: 10px;
+}
+
+/* images and videos max out at full width */
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#gameButtonArea > button {
+  border-radius:50%;
+  border: 40px solid brown;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#startBtn {
+  background-color: #7CFC00; 
+  grid-column: 1/8;
+}
+#stopBtn {
+  background-color: red; 
+  grid-column: 1/8;
+}
+
+#music {
+  color: white;
+  background-color: #002db3;
+  grid-column: 7/8;
+}
+
+#random {
+  color: brown;
+  background-color: yellow;
+  grid-column: 7/8;
+}
+
+#easyMusic {
+  background-color: purple;  
+}
+
+#mediumMusic, #insaneMusic {
+  background-color: light gray;  
+}
+
+img {
+  position: relative;
+  width: 144%;
+  height: 100%;
+}
+
+
+#btn1
+{
+  width:100px;
+  height:100px;
+  margin:auto;
+  background:red;
+}
+
+#btn1:active, #btn1.lit {
+  background: #cc0000; 
+}
+#btn2 {
+  width:150px;
+  height:150px;
+  background: orange; 
+  margin:auto;
+}
+#btn2:active, #btn2.lit {
+  background: #e67300; 
+}
+#btn3 {
+  width:200px;
+  height:200px;
+  margin:auto;
+  background: yellow; 
+
+}
+#btn3:active, #btn3.lit {
+  background: #e6ac00; 
+}
+#btn4 {
+  width:300px;
+  height:300px;
+  margin:auto;
+  background: #7CFC00; 
+}
+#btn4:active, #btn4.lit {
+  background: #33cc00; 
+}
+#btn5 {
+  width:300px;
+  height:300px;
+  margin:auto;
+  background: #00BFFF; 
+}
+#btn5:active, #btn5.lit {
+  background: #00a3cc; 
+}
+#btn6 {
+  width:200px;
+  height:200px;
+  margin:auto;
+  background: blue; 
+}
+#btn6:active, #btn6.lit {
+  background: #002db3; 
+}
+#btn7 {
+  width:150px;
+  height:150px;
+  margin:auto;
+  background: #BA55D3; 
+}
+#btn7:active, #btn7.lit {
+  background: #8600b3; 
+}
+#btn8 {
+  width:100px;
+  height:100px;
+  margin:auto;
+  background: red; 
+}
+#btn8:active, #btn8.lit {
+  background: #cc0000; 
+}
+
+.hidden {
+  display: none;
+}
+
+
+#ron {
+  position: absolute;
+  height:300px;
+  width:422px;
+  content:url("https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/ron_weasley_on_broom_side.png?v=1648626220632");
+}
+
+
+
+/***************************************************************************************************************************/
+/*                                               trash                                                                     */
+/***************************************************************************************************************************/
+
+/* #btn1
+{
+ font-size: 3em;  controlls size
+ display: inline-block;
+ width: 100%;
+ height: 100%;
+ border: 0.5em solid brown;
+ position: relative;
+ border-radius: 50%;
+  
+}
+#btn1::before
+{
+ content: "";
+ display: inline-block;
+ position: relative;
+
+ bottom: -8.5em; 
+ border-width: 0;
+ background: brown;
+ width: 10em;
+ height: 0.5em;
+ -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+     -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+} */
