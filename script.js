@@ -19,28 +19,40 @@ var countDown;
 var timeLeft;
 
 //intro song     
-var introSong; 
+var introSong = new Audio('https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/firstQuidditchGame-intro.mp3?v=1648874138647');
+var gameIntroSong;
 
 
 var myInterval;
 var totalTime = 25;
 var startTime;
 
-function gameTimer(){
-  countDown = countDown-1;
-  if(countDown <= -1){
-    clearInterval(timeLeft);
-    stopGame();
-    return;
+// function gameTimer(){
+//   countDown = countDown-1;
+//   if(countDown <= -1){
+//     clearInterval(timeLeft);
+//     stopGame();
+//     return;
+//   }
+//   document.getElementById("timer").innerHTML = "00:00:" + countDown;
+// }
+
+// function playIntro() {
+//   //document.getElementById("playIntro").play();
+
+// }
+
+// window.addEventListener('load', (event) => {
+//   introSong.play();
+// });
+
+function selectSong() {
+  
+  if(gamePlaying === false) {
+    pattern = patterns[Math.floor(Math.random()*(4-1))];
   }
-  document.getElementById("timer").innerHTML = "00:00:" + countDown;
 }
 
-
-function selectSong(idx) {
-  document.getElementById("music").classList.add("hidden");
-  document.getElementById("random").classList.remove("hidden");
-  
 //   if(idx === 0) {
 //     document.getElementById("easyMusic").style.background-color="purple";
 //     document.getElementById("mediumMusic").style.background-color="light gray";
@@ -56,36 +68,31 @@ function selectSong(idx) {
 //     document.getElementById("mediumMusic").style.background-color="light gray";
 //     document.getElementById("insaneMusic").style.background-color="purple";
 //   }
-  
-  pattern = patterns(Math.floor(Math.random()*(3-1)+1));
-  
-}
 
 
 function createPattern() {
+    
+  if(!gamePlaying) {
+      for(let i=0; i < Math.floor((Math.random() * 5))+5; i++) {
+      let val = Math.floor((Math.random() * 8) + 1);
+      pattern.push(val); 
+    }
   
-  document.getElementById("music").classList.remove("hidden");
-  document.getElementById("random").classList.add("hidden");
-  
-  pattern = []
-  for(let i=0; i < Math.floor((Math.random() * 5))+5; i++) {
-    let val = Math.floor((Math.random() * 8) + 1);
-    pattern.push(val); 
-  console.log(pattern)
   }
+
 }
 
 function startGame() {
   
   if(pattern.length === 0) {
-    selectSong()
+    selectSong();
   }
   //clearInterval(countDown);
   totalMistakes = 0;
   progress = 0;
   
-  introSong = new Audio('https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/firstQuidditchGame-gameBegins.mp3?v=1648866138752');
-  introSong.play();
+  var gameIntroSong = new Audio("https://cdn.glitch.global/7351af73-79b7-4644-b3a9-8c98c123ae4c/firstQuidditchGame-gameBegins.mp3?v=1648866138752");
+  gameIntroSong.play();
   
   gamePlaying = true;
   
@@ -100,7 +107,7 @@ function startGame() {
 
 function stopGame() {
   gamePlaying = false;
-  
+  document.getElementById("points").innerHTML = "--:--";
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
   introSong.pause();
@@ -110,7 +117,7 @@ function stopGame() {
 
 function winGame(){
   stopGame();
-  alert("You won the game!");
+  alert("Gryffindors Win The Quidditch Cup!");
 }
 
 function loseGame(){
@@ -163,15 +170,18 @@ function playClueSequence(){
 }
 
 function guess(btn){
-  console.log("user guessed: " + btn);
+
   
   //game got stopped
   if(!gamePlaying){
     return;
   }
   
+  //console.log("user guessed: " + btn);
+  document.getElementById("points").innerHTML = progress + " : " + totalMistakes;
+  
   //guess matches
-  if(btn == pattern[guessCounter]){
+  if(btn === pattern[guessCounter]){
     //we've reached the end of all the buttons for this round of the song
     if(guessCounter == progress){
       //we've reached the end all the buttons for this song
@@ -183,6 +193,7 @@ function guess(btn){
       else{
         progress++;
         //player advances to next clue
+        document.getElementById("points").innerHTML = progress + " : " + totalMistakes;
         playClueSequence();
         //clear timer
       }
@@ -194,11 +205,11 @@ function guess(btn){
   }
   //guess doesnt match
   else {
+    
     //player has remaining lives
-    if(totalMistakes < 3){
+    if(totalMistakes < 2){
       totalMistakes++;
-      document.getElementById("points").innerHTML = 
-        progress + " : " + totalMistakes;
+      document.getElementById("points").innerHTML = progress + " : " + totalMistakes;
       playClueSequence();
     }
     //player is out of lives
@@ -207,6 +218,8 @@ function guess(btn){
       loseGame();
     }
   }
+  //console.log("user guessed: " + btn);
+  //document.getElementById("points").innerHTML = progress + " : " + totalMistakes;
 }
 
 
