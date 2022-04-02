@@ -39,14 +39,32 @@ The following **additional** features are implemented:
 - [x] Little golden stars follow the mouse cursor
 - [x] Intro sound when play button gets clicked
 - [x] Button to switch between random music pattern generation or a random song from a song array
+- [x] Buttons can be clicked with the mouse and 8 corresponding keys:
+A for Red, S for Orange, D for Yellow, F for Green, G for Light Blue, H for Blue, J for Purple, and K for Red 
+
 
 ## Video Walkthrough (GIF)
 
-If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
+Correct guesses increase the Gryffindor team's total points
+
+![](https://i.imgur.com/Vo7vcgd.gif)
+
+
+Wrong guesses increase the Slytherin team's total points
+
+![](https://i.imgur.com/agowRgY.gif)
+
+
+All correct guesses make Gryffindor the Winner of the Hogwarts Quidditch Cup!
+
+![](https://i.imgur.com/KX5aMVA.gif)
+
+
+Three incorrect guesses make Slytherin the Winner of the Hogwarts Quidditch Cup!
+Meaning Gryffindor loses...
+
+![](https://i.imgur.com/oyRH2yt.gif)
+
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -108,7 +126,7 @@ I'd make the same game with Super Mario Bro's Theme, a SpongeBob Theme, and a Pl
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright [Rose De Sicilia]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
