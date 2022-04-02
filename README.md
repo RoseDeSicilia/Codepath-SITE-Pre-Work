@@ -52,8 +52,7 @@ Correct guesses increase the Gryffindor team's total points
 
 Wrong guesses increase the Slytherin team's total points
 
-![](https://i.imgur.com/sOXEDto.gif)
-
+![](https://i.imgur.com/PAk84UD.gif)
 
 
 All correct guesses make Gryffindor the Winner of the Hogwarts Quidditch Cup!
